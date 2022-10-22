@@ -256,6 +256,5 @@ t.test(IBU ~ ipa_ale, data = beerKnn)
 There are many different types of beer and breweries across the US and this is just a small sample. The K-nn hyper-tuned model with 100 iterations was able to produce an accurate differentiation between IPAs and Ales 86.1% of the time given the IBU and ABV, with K = 5. Additionally, t-tests for both the mean difference of IPAs and Ales based on ABV and IBU were statistically significant with p-values <.0001. Both of these are consistent with
 
 # Link to powerpoint slides and presentation
-[YouTube Video](https://youtu.be/jSxGb0kRdUQ)
+[YouTube Video](https://youtu.be/jSxGb0kRdUQ)  
 [Github Link](https://github.com/GarrettDrake/Doing-Data-Science/tree/main/Unit%208-9)
-
