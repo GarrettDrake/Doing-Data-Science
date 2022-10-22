@@ -4,6 +4,9 @@ author: "Garrett Drake and Eny Ntuk"
 date: "`r Sys.Date()`"
 output: html_document
 ---
+  
+# Introduction
+The following is an exploratory data analysis of beers and breweries located across the united states. We will present several facts about the median statistics of beers and breweries as well as explain an algorithmic  model that attempts to accurately differentiate between IPAs and Ales given the IBU and ABV of a beer.
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -30,6 +33,7 @@ beer <- read.csv("https://raw.githubusercontent.com/BivinSadler/MSDS_6306_Doing-
 
 breweries <- read.csv("https://raw.githubusercontent.com/BivinSadler/MSDS_6306_Doing-Data-Science/Master/Unit%208%20and%209%20Case%20Study%201/Breweries.csv", header = T)
 ```
+
 
 # Problem 1
 ```{r Problem 1 Breweries per State}
