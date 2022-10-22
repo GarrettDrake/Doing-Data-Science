@@ -1,1 +1,1 @@
-This is an exploratory data analysis of two data sets of beer and breweries. 
+The following is an exploratory data analysis of beers and breweries located across the united states. We will present several facts about the median statistics of beers and breweries as well as explain an algorithmic  model that attempts to accurately differentiate between IPAs and Ales given the IBU and ABV of a beer.
