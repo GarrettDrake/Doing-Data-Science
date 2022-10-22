@@ -48,6 +48,7 @@ table(breweries$State)
 # Problem 1 Printout
 ## With plot of breweries by state in order from least to greatest
 ```{r Problem 1 printout}
+#produce table generation in rmd
 kable(num_breweries, caption = "Problem 1 Breweries per state")
 ```
 
@@ -74,11 +75,13 @@ big_beer <- rename(big_beer, Beer = Name.x, Brewery = Name.y, Beer_Type = Style)
 
 ### First 6 rows of merged data set
 ```{r}
+# Get first 6 rows
 head(big_beer, n =6)
 ```
 
 ### Last 6 rows of merged data set
 ```{r}
+# Get last 6 rows
 tail(big_beer, n = 6)
 ```
 
@@ -109,6 +112,7 @@ state_med_ABV_IBU <- big_beer %>% group_by(State) %>% summarise(Median_ABV = med
 
 ### Table of Median ABV and IBU by State
 ```{r}
+#produce table generation in rmd
 kable(state_med_ABV_IBU, caption = "Table of Median ABV and IBU by State")
 ```
 
@@ -207,6 +211,7 @@ big_beer %>% ggplot(aes(x = IBU, y = ABV)) +
 ### There is evidence to suggest that a medium positive relationship between IBU and ABV exists,i.e. generally as IBU increases so does ABV and vice versa. A linear estimate of this relationship is shown by the blue line. Correlation coefficient r = .671, representing medium correlation
 
 ``` {r correlation coefficient}
+#ger correlation coefficient
 cor(big_beer$IBU, big_beer$ABV, use = 'pairwise.complete.obs', method = "pearson")
 ```
 
@@ -239,21 +244,22 @@ for(j in 1:iterations)
 }
 MeanAcc <- colMeans(masterAcc)
 which.max(MeanAcc) # which K gives max percentage
-max(MeanAcc)
+max(MeanAcc) # max accuracy percentage of this model
 ```
 
 ```{r Plot of model}
+#plot the KNN model
 plot(seq(1,numks,1),MeanAcc, type = "l", xlab = "Number of Ks", ylab = "Mean Accuracy", main = "k-NN Classification Accuracy for IPA and IBV Beers", col = "blue")
-abline(v = 5, col = "red")
-abline(h = .8607884, col = "red")
+abline(v = 5, col = "red") # add vertical (k) line
+abline(h = .8607884, col = "red") # add horizontal (percentage accuracy) line
 ```
 
 
 # Addition things
 T test for ABV and IBU
 ```{r t tests for abv and IBU}
-t.test(ABV ~ ipa_ale, data = beerKnn)
-t.test(IBU ~ ipa_ale, data = beerKnn)
+t.test(ABV ~ ipa_ale, data = beerKnn) # t test for abv by ipa vs ale
+t.test(IBU ~ ipa_ale, data = beerKnn) # t test for IBU by ipa vs ale
 ```
 
 # Conclusions
